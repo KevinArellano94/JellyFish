@@ -1,2 +1,0 @@
-# JellyFish
-Created with CodeSandbox

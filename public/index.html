@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- BootStrop 4.3.1 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- Awesome Fonts 4.7.0 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Popper 1.14.7 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- BootStrop JS 4.3.1 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Awesome Fonts 5.7.2 -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <!-- Project App Custome Styling -->
+    <link rel="stylesheet" type="text/css" href="App.css" />
+    <!-- Project App Custome Styling -->
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <!-- React Minimilistic CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+    ></script>
+    <!-- React DOM Minimilistic CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+    <!-- Don't Remember what this was for... -->
+    <script crossorigin src="..."></script>
+    <!-- Music.js Function -->
+    <style>
+      #playlist {
+        list-style: none;
+      }
+      #playlist li a {
+        color: black;
+        text-decoration: none;
+      }
+      #playlist .current-song a {
+        color: blue;
+      }
+    </style>
+    <!-- MusicYT.js Function -->
+
+    <!-- Title -->
+    <title>React App</title>
+  </head>
+
+  <body>
+    <noscript>
+      It is not okay if you can read this... LoL. Call in the wizards to enable
+      JavaScript to run this.
+    </noscript>
+    <!-- Project App -->
+    <div id="root"></div>
+    <!-- Netlify Identity Widget -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    <!-- JQuery 2.2.0 -->
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <!-- audioPlayer.js File -->
+    <script src="audioPlayer.js"></script>
+    <!-- Music.js Function -->
+    <script>
+      /*
+    Default constructor configuration:
+        autoplay: false,
+        shuffle: false,
+        loop: false,
+        playerId: "audioPlayer",
+        playlistId: "playlist",
+        currentClass: "current-song"
+      */
+
+      // loads the audio player
+      var config = {
+        autoplay: true,
+        loop: true,
+        shuffle: true
+      };
+      var playlist = new AudioPlaylist();
+    </script>
+  </body>
+</html>
